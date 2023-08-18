@@ -1,0 +1,30 @@
+.title { 
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.32px;
+    color: var(--color-black);
+    width: 257px;
+}
+
+.text {
+    color: #434343;
+    margin-left: 69px;
+}
+
+.span {
+    display: block;
+}
+
+.span + .span {
+    margin-top: 8px;
+}
+
+
+@media (max-width: 1170px) {
+    .text {
+        margin-left: 24px;
+        margin-right: 24px;
+        width: 70%;
+    }
+}

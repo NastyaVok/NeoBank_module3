@@ -1,0 +1,39 @@
+.title,
+.text {  
+    line-height: 147.4%;
+}
+
+.title {
+    color: #434343;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    margin-bottom: 8px; 
+    height: 48px;
+}
+
+.text {
+    color: var(--color-black);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .title {
+        height: 80px;
+    }
+    .text {
+        font-size: var(--font-size-big);
+        margin-top: var(--spacing-small);
+    }
+}
+
+@media (max-width: 620px) {
+    .title {
+        height: 30px;
+    }
+}
+@media (max-width: 360px) {
+    .title {
+        height: 55px;
+    }
+}
