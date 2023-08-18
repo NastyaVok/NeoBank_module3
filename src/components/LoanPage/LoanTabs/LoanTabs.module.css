@@ -1,0 +1,12 @@
+.list {
+    margin-left: var(--spacing-small);
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.line {
+    border: 2px solid rgba(128, 128, 128, 0.20);
+    width: 100%;
+    display: block;
+    margin-bottom: var(--spacing-medium);
+}

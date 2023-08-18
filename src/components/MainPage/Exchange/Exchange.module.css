@@ -1,0 +1,134 @@
+.exchange {
+    margin-bottom: 48px;
+}
+
+.inner {
+    background: linear-gradient(rgba(244, 244, 244, 0.9), rgba(178, 178, 178, 0), rgba(178, 178, 178, 0.8));
+    border-radius: var(--border-radius-big);
+    box-shadow: 0 2px 4px rgba(187, 187, 187, 0.2), 0 0 4px rgba(0, 0, 0, 0.08);
+    padding: var(--spacing-medium);
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.title,
+.subtitle,
+.header {
+    font-weight: 500;
+    line-height: var(--line-height-header);
+}
+
+.title {
+    color: #1C1C1E;
+    font-size: var(--font-size-big);
+}
+
+.subtitle {
+    color: var(--color-black);
+    font-size: var(--font-size-small);
+}
+
+.header {
+    color: var(--color-black);
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+.list {
+    display: flex;
+}
+
+.list + .list {
+    margin-top: var(--spacing-medium);
+}
+
+.item {
+    display: flex;
+}
+
+.item + .item {
+    margin-left: var(--spacing-medium);
+}
+
+.currency,
+.text,
+.courses {
+    font-weight: 700;
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+}
+
+.currency {
+    color: var(--color-grey);
+    margin-right: 20px;
+}
+
+.text {
+    color: var(--color-black);    
+}
+
+.courses {
+    color: var(--color-white);
+}
+
+@media (max-width: 840px) {
+    .head {
+        display: block;
+    }
+}
+
+@media (max-width: 660px) { 
+    .title {
+        font-size: var(--font-size-medium);
+        line-height: var(--line-height-medium);
+    }
+    .currency {
+        margin-right: 10px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .currency,
+    .text {
+        font-weight: 500;
+    }
+    .img {
+        display: none;
+    }
+    .item + .item {
+        margin-left: var(--spacing-small);
+    }
+}
+
+@media (max-width: 400px) { 
+    .subtitle {
+        font-size: 12px;
+    }
+    .head {
+        margin-bottom: 0;
+    }
+    .header {
+        margin-bottom: 6px;
+    }
+    .currency,
+    .text {
+        font-size: var(--font-size-small);
+    }
+    .currency {
+        margin-right: 2px;
+    }
+    .item + .item {
+        margin-left: 6px;
+    }
+}

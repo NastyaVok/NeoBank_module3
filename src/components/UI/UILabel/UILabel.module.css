@@ -1,0 +1,22 @@
+.label {
+    
+}
+
+.text,
+.required {
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.text {
+    color: #1A202C;
+}
+
+.required {
+    color: #F00;
+}
+
+@media (max-width: 800px) {
+
+}

@@ -1,0 +1,72 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000000;
+    --color-grey: #808080;
+    --color-red: #FF5631;
+    --color-pink: #B4387A;
+    --color-yellow: #B2A35F;
+    --color-brown: #7B7454;
+    --color-blue: #003CFF;
+    --color-purple: #5B35D5;
+    --color-hover: #7796C0;
+    --color-orange: #EB801D;
+  
+    --font-family-main: 'Ubuntu', sans-serif;
+    --font-family-Nunito: 'Nunito Sans', sans-serif;
+    --font-family-Rubik: 'Rubik', sans-serif;
+  
+    --font-size-header: 48px;
+    --font-size-big: 30px; 
+    --font-size-medium: 20px;
+    --font-size-small: 16px;
+
+    --line-height-header: 50px;
+    --line-height-big: 30px;
+    --line-height-medium: 22.4px;
+    --line-height-small: 14px;
+
+    --border-radius-big: 28px;
+    --border-radius-medium: 20px;
+    --border-radius-small: 16px;
+
+    --spacing-big: 40px;
+    --spacing-medium: 32px;
+    --spacing-small: 16px;
+
+    --transition: 0.4s;
+  }
+  
+  *,  
+  ::after, 
+  ::before {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: var(--font-family-main);
+  }
+  
+  li,
+  ul,
+  p,
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  details,
+  summary {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border-style: none;
+  }
+  
+  img {
+    display: block;
+  }
+  
+  a {
+    color: inherit;
+    cursor: default;
+    text-decoration: none;
+    outline: none;
+  }

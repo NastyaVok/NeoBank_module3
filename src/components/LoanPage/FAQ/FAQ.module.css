@@ -1,0 +1,17 @@
+.block + .block {
+    margin-top: var(--spacing-medium);
+}
+
+.title {
+    color: var(--color-black);
+    font-size: var(--font-size-big);
+    font-weight: 700;
+    margin-bottom: var(--spacing-medium);
+    line-height: 147.4%;
+}
+
+@media (max-width: 450px) {
+    .title {
+        text-align: center;
+    }
+}

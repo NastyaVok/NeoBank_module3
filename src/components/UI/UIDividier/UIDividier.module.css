@@ -1,0 +1,48 @@
+.item {
+    position: relative;
+    color: var(--color-brown);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.32px;
+}
+
+.item + .item {
+    margin-left: var(--spacing-medium);
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.item:hover::before {
+    position: absolute;
+    content: '';
+    border: 2px solid  var(--color-brown);
+    bottom: -11px;
+    left: -16px;
+    right: -16px;
+}
+
+.active::before {
+    position: absolute;
+    content: '';
+    border: 2px solid  var(--color-brown);
+    bottom: -11px;
+    left: -16px;
+    right: -16px;
+}
+
+@media (max-width: 400px) {
+    .item + .item {
+        margin-left: var(--spacing-small);
+    }
+    .item {
+        width: 24%;
+        text-align: center;
+    }
+    .item:hover::before {
+        left: -8px;
+        right: -8px;
+    }
+}

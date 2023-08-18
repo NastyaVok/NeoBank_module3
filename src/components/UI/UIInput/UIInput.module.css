@@ -1,0 +1,39 @@
+.text {
+    color: var(--color-grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    width: 97%;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid rgba(128, 128, 128, 0.20);
+    background: #F9F5E3;
+    padding: 0 var(--spacing-small);
+    margin-top: 8px;
+}
+
+.ok {  
+    background-image: url(./img/ok.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 95%;
+}
+
+.mistake {  
+    background-image: url(./img/error.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 95%;
+}
+
+.text:focus {
+    outline: none;
+    border: 2px solid var(--color-purple);
+}
+
+.error {
+    color: var(--color-red);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: 100%;
+}

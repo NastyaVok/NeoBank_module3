@@ -1,0 +1,26 @@
+.btn {
+    color: var(--color-white);
+    font-size: var(--font-size-small);
+    line-height: 17.92px;
+    letter-spacing: 0.32px;
+    font-weight: 700;
+    background-color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    border-radius: var(--border-radius-small);
+    padding: 16px;
+}
+
+.btn:hover {
+    background-color: var(--color-hover);
+    border: 1px solid var(--color-hover);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+@media (max-width: 400px) { 
+    .btn { 
+        line-height: 10px;
+        letter-spacing: 0px;
+        padding: 16px 6px;
+    }
+}

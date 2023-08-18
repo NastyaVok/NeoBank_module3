@@ -1,0 +1,96 @@
+.CreaditCard {
+    margin-top: 27px;
+    margin-bottom: 48px;
+}
+
+.wrapper {
+    border-radius: 28.8px;
+    background: linear-gradient(180deg, rgba(203, 213, 224, 0.62) 0%, rgba(254, 235, 200, 0.56) 100%);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+    padding: 48px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: var(--color-white);
+    font-size: var(--font-size-header);
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.96px;
+    margin-bottom: 48px;
+}
+
+.text {
+    color: #2D3748;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: 17.92px;
+    letter-spacing: 0.32px;
+    margin-bottom: var(--spacing-medium);
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-medium);
+}
+
+.hidden {
+    display: none;
+}
+
+.visidle {
+    display: block;
+}
+
+.img__container {
+    margin-right: 68.5px;
+}
+
+@media (max-width: 1230px) {
+    .img__container {
+        margin-right: 0;
+        margin-left: var(--spacing-medium);
+    }
+}
+@media (max-width: 1100px) {
+    .img {
+        width: 300px;
+    }
+    .title {
+        font-size: var(--font-size-big);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 880px) {
+    .img {
+        width: 250px;
+    }
+    .img__container {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .img__container {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .list {
+        display: block;
+        text-align: center;
+    }
+    .btn {
+        text-align: center;
+    }
+    .title,
+    .text {
+       text-align: center;
+    }
+}

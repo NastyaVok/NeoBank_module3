@@ -1,0 +1,151 @@
+.support {
+    margin-bottom: 98px;
+}
+
+.inner {
+    text-align: center;
+}
+
+.title,
+.subtitle,
+.text,
+.newsletter {
+    line-height: 147.4%;
+}
+
+.title,
+.subtitle,
+.newsletter {
+    font-weight: 700;
+}
+
+
+.subtitle,
+.text {
+    color: #1C1C1E;
+    font-size: var(--line-height-big);
+    letter-spacing: 0.6px;
+}
+
+.title,
+.newsletter {
+    color: var(--color-orange);
+    font-size: 24px;
+    letter-spacing: 0.48px;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    margin-bottom: 26.82px;
+}
+
+.text {
+    font-weight: 500;
+    margin-bottom: 62px;
+}
+
+.form {
+    position: relative;
+    width: 525px;
+    margin: auto;
+}
+
+.input {
+    width: 524.8px;
+    height: 89.839px;
+    border-radius: var(--border-radius-medium);
+    background: var(--color-white);
+    padding-left: 69.64px;
+    padding-right: 195px;
+    box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.10);
+    border-style: none;
+}
+
+.input,
+.input::placeholder {
+    color: #9092B0;
+    font-family: var(--font-family-Nunito);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    line-height: 147.4%;
+    letter-spacing: 0.4px;
+}
+
+.input__img {
+    position: absolute;
+    width: 27.885px;
+    height: 37.433px;
+    top: 24px; 
+    left: 32px;
+}
+
+.btn {
+    position: absolute;
+    top: 24px;  
+    right: 32px;
+    background-color: #686DF1;
+    width: 161.477px;
+    height: 44.919px;
+    border-radius: var(--border-radius-medium);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn__img {
+    width: 23.907px;
+    height: 26.037px;
+    margin-left: 14.13px;
+}
+
+.btn__text {
+    color: var(--color-white);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    line-height: 126.9%; 
+    width: 95.877px;
+    margin-right: 11.1px;
+}
+
+@media (max-width: 660px) { 
+    .title,
+    .subtitle,
+    .text,
+    .newsletter {
+        font-size: var(--font-size-medium);
+        line-height: var(--line-height-medium);
+    }
+    .form,
+    .input {
+        width: 380px;
+    }
+    .input {
+        padding-left: 12px;
+        padding-right: 110px;
+    }
+    .input__img,
+    .btn__img {
+        display: none;
+    }
+    .btn {
+        width: 90px;
+        right: 12px;
+    }
+    .btn__text {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 400px) { 
+    .form,
+    .input {
+        width: 310px;
+    } 
+}
