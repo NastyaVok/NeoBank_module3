@@ -1,33 +1,30 @@
 import { useState } from 'react';
-import { UseFormRegister, Path, FieldErrors  } from 'react-hook-form';
+import { useFormContext, FieldValues } from 'react-hook-form';
+
 import { ErrorMessage } from '@hookform/error-message';
 
 import cn from 'classnames';
 
-import { PrescoringForm } from '../../../interfaces/interface';
-
 import styles from './UIInput.module.css';
 
-interface Iprops {
-    name: Path<PrescoringForm>,
-    register: UseFormRegister<PrescoringForm>,
-    errors: FieldErrors<PrescoringForm>,
+interface IProps {
+    name: string,
+    placeholder: string,
     type?: string,
-    placeholder?: string,
     classes?: string,
-    click: boolean,
     required?: boolean
 }
 
-const UIInput = ({ name, register, type='text', placeholder, classes, errors, click, required= true }: Iprops) => {
+const UIInput = ({name, placeholder, type='text', classes, required=true }: IProps) => {
   const [value, setValue] = useState<string>('');
+  const { register, formState: {errors, isSubmitted} } = useFormContext<FieldValues>();
 
   const changeValue = (e: string) => {
     setValue(e.trim());
   };
-
+  
   const isOkValue = () => {
-    if (required && click) {
+    if (required && isSubmitted) {
       const condition = Object.keys(errors).includes(name);
       return condition ? styles.mistake: styles.ok;
     }
@@ -36,8 +33,8 @@ const UIInput = ({ name, register, type='text', placeholder, classes, errors, cl
 
   return (
     <>
-      <input
-        {...register(name, {required: true})}
+      <input 
+        {...register(name, {required: true})} 
         type={type}
         className={cn(styles.text, classes, isOkValue())}
         value={value}
@@ -49,7 +46,8 @@ const UIInput = ({ name, register, type='text', placeholder, classes, errors, cl
         name={name}
         render={({ message }) => <p className={styles.error}>{message}</p>}
       />
-    </> 
+    </>
+        
   );
 };
 

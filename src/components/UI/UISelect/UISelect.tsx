@@ -1,24 +1,21 @@
 import { useState } from 'react';
-import { UseFormRegister, Path, FieldErrors  } from 'react-hook-form';
+import { useFormContext, FieldValues } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 
 import cn from 'classnames';
 
-import { PrescoringForm } from '../../../interfaces/interface';
-
 import styles from './UISelect.module.css';
 
 interface Iprops {
-    name: Path<PrescoringForm>,
-    register: UseFormRegister<PrescoringForm>,
-    errors: FieldErrors<PrescoringForm>,
+    name: string,
     classes?: string,
     initial: string | number,
     options: { el: string, title: string }[]
 }
 
-const UISelect = ({ name, register, classes, options, errors, initial }: Iprops) => {
+const UISelect = ({ name, classes, options,initial }: Iprops) => {
   const [value, setValue] = useState(initial);
+  const { register, formState: {errors} } = useFormContext<FieldValues>();
   const changeValue = (e: string) => {
     setValue(e);
   };

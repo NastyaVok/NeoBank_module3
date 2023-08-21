@@ -1,7 +1,7 @@
 import { makeObservable, observable, computed , action, runInAction} from 'mobx';
 import axios from 'axios';
 
-import { IApplication } from '../interfaces/interface';
+import { IApplication } from '../types/interface';
 
 import { IRootStore } from './RootStore';
 

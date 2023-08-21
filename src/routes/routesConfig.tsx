@@ -1,5 +1,5 @@
-import MainPage from '../containers/MainPage';
-import LoanPage from '../containers/LoanPage';
+import MainPage from '../pages/MainPage';
+import LoanPage from '../pages/LoanPage';
 
 const routesConfig = [
   {

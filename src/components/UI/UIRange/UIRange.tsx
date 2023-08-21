@@ -1,18 +1,14 @@
 import { Dispatch, useState } from 'react';
-import { UseFormRegister, Path, FieldErrors  } from 'react-hook-form';
+import { useFormContext, FieldValues } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 
 import cn from 'classnames';
-
-import { PrescoringForm } from '../../../interfaces/interface';
 
 import styles from './UIRange.module.css';
 
 interface Iprops {
     title: string
-    name: Path<PrescoringForm>,
-    register: UseFormRegister<PrescoringForm>,
-    errors: FieldErrors<PrescoringForm>,
+    name: string,
     value: string,
     setValue: Dispatch<React.SetStateAction<string>>,
     placeholder?: string,
@@ -21,8 +17,9 @@ interface Iprops {
     max: number,
 }
 
-const UIRange = ({ title, name, register, value, setValue, placeholder, classes, errors, min, max}: Iprops) => {
+const UIRange = ({ title, name, value, setValue, placeholder, classes, min, max}: Iprops) => {
   const [width, setWidth] = useState<number>(0);
+  const { register, formState: {errors} } = useFormContext<FieldValues>();
 
   const mathPercents = (value: string) => {
     const requiredNumber = Math.round((Number(value) - 15000) / 590000 * 100);
