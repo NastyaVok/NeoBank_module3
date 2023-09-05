@@ -37,7 +37,7 @@ export interface IApplication {
 
 export enum Gender {
     'MALE'='MALE',
-    'FAMALE'='FAMALE',
+    'FEMALE'='FEMALE',
 }
 
 export enum StatusMarital {
