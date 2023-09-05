@@ -1,0 +1,35 @@
+.wrapper {
+    margin-top: 53px;
+    margin-bottom: 96px;
+    text-align: center;
+}
+
+.img {
+    margin: auto;
+}
+
+.img,
+.title,
+.text {
+    margin-bottom: var(--spacing-medium);
+}
+
+.title {
+    color: #1C1C1E;
+    font-size: var(--font-size-big);
+    font-weight: 700;
+    line-height: 147.4%; 
+}
+
+.text {
+    color: #4F5665;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: 147.4%; 
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: var(--font-size-medium);
+    }
+}

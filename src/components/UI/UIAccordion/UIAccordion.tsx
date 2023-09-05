@@ -6,8 +6,8 @@ interface IProps {
     title: string,
     text: string,
     ind: number,
-    tab: number|undefined,
-    setTab: Dispatch<React.SetStateAction<number|undefined>>,
+    tab: number | null,
+    setTab: Dispatch<React.SetStateAction<number | null>>,
 }
 
 const UIAccordion = ({ title, text, ind, tab, setTab }: IProps) => {
@@ -16,7 +16,7 @@ const UIAccordion = ({ title, text, ind, tab, setTab }: IProps) => {
     e.preventDefault();
     setTab(ind);
     if(tab === ind) {
-      setTab(undefined);
+      setTab(null);
     }
   };
 

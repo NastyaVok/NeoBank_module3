@@ -1,0 +1,40 @@
+.wrapper {
+}
+
+.input {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.label {
+    color: #1A202C;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 112%;
+}
+
+.input + .label {
+    position: relative;
+	padding: 0 0 0 36px;
+	cursor: pointer;
+}
+
+.input + .label:before {
+    content: '';
+	position: absolute;
+	top: 0px;
+	left: 2px;
+	width: 20px;
+	height: 20px;
+    border: 1px solid var(--color-grey);
+	border-radius: 2px;
+	background: var(--color-white);
+	transition: .2s;
+}
+.input:checked + label:before {
+	background: #3182CE;
+    background-image: url('./img/line.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

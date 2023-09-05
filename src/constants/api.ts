@@ -15,13 +15,22 @@ const CATEGORY = 'business';
 export const API_URL_NEWS = 'https://' + API_HOST_NEWS + 
     `/v2/top-headlines?country=${COUNTRY}&pageSize=${SIZE}&category=${CATEGORY}`;
 
-const API_HOST_LOCALHOST = 'http://localhost:8080';
+export const API_HOST_LOCALHOST = 'http://localhost:8080';
 
-const POSTEMAIL = '/email';
-const POSTCREATE = '/application';
-const APPLY = '/apply';
+export const EMAIL = '/email';
+export const APPLICATION = '/application';
+export const REGISTRATION = '/registration';
+export const APPLY = '/apply';
+export const ADMIN = '/admin';
+export const DOCUMENT = '/document';
+export const SIGN = '/sign';
+export const CODE = '/code';
+export const DENY = '/deny';
 
-
-export const API_URL_POSTEMAIL = API_HOST_LOCALHOST + POSTEMAIL;
-export const API_URL_POSTCREATE = API_HOST_LOCALHOST + POSTCREATE;
-export const API_URL_POSTAPPLY = API_HOST_LOCALHOST + POSTCREATE + APPLY;
+export const API_URL_POSTEMAIL = API_HOST_LOCALHOST + EMAIL;
+export const API_URL_POSTCREATE = API_HOST_LOCALHOST + APPLICATION;
+export const API_URL_POSTAPPLY = API_HOST_LOCALHOST + APPLICATION + APPLY;
+export const API_URL_PUTREGISTRATION = API_HOST_LOCALHOST + APPLICATION + REGISTRATION;
+export const API_URL_GETAPPLICATION = API_HOST_LOCALHOST + ADMIN + APPLICATION;
+export const API_URL_POSTDOCUMENT = API_HOST_LOCALHOST + DOCUMENT;
+export const API_URL_POSTCODE = SIGN + CODE;

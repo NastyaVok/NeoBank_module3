@@ -1,4 +1,4 @@
-import { makeObservable, observable, computed , action, runInAction} from 'mobx';
+import { makeObservable, observable, computed, action, runInAction} from 'mobx';
 import axios from 'axios';
 
 import { IApplication } from '../types/interface';

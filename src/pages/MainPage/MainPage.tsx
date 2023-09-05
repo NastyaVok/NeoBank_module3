@@ -1,3 +1,5 @@
+import { setLocalStorage } from '../../utils/localStore';
+
 import Cards from './Cards';
 import Exchange from './Exchange';
 import Features from './Features';
@@ -7,7 +9,9 @@ import Support from './Support';
 
 import styles from './MainPage.module.css';
 
-const MainPage = () => {
+const MainPage = () => { 
+  setLocalStorage('PrescoringStep', {PrescoringStep: 0});
+
   return (
     <div className={styles.wrapper}>
       <Cards />

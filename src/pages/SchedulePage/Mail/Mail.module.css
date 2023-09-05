@@ -1,0 +1,22 @@
+.wrapper {
+    text-align: center;
+    margin-top: 179px;
+    margin-bottom: 238px;
+}
+
+.title {
+    color: #1C1C1E;
+    font-size: var(--font-size-big);
+    font-weight: 700;
+    line-height: 112%;
+    letter-spacing: 0.6px;
+    margin-bottom: var(--spacing-medium);
+}
+
+.text {
+    color: #4F5665;
+    font-size:  var(--font-size-small);
+    font-weight: 500;
+    line-height: 112%; 
+    letter-spacing: 0.32px;
+}

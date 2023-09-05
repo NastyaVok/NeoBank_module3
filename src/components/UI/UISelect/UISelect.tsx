@@ -10,10 +10,10 @@ interface Iprops {
     name: string,
     classes?: string,
     initial: string | number,
-    options: { el: string, title: string }[]
+    options: { el: string | number, title: string | number }[]
 }
 
-const UISelect = ({ name, classes, options,initial }: Iprops) => {
+const UISelect = ({ name, classes, options, initial }: Iprops) => {
   const [value, setValue] = useState(initial);
   const { register, formState: {errors} } = useFormContext<FieldValues>();
   const changeValue = (e: string) => {
@@ -28,6 +28,7 @@ const UISelect = ({ name, classes, options,initial }: Iprops) => {
         value={value}
         onChange={(e) => {changeValue(e.target.value);}}
       >
+        <option value="" hidden></option>
         {options.map(({el, title}) =>
           <option key={el} value={el}>{title}</option>,
         )} 

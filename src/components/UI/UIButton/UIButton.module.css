@@ -17,6 +17,16 @@
     transition: var(--transition);
 }
 
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+    background-color: rgba(217, 55, 55, 0.80);
+    border: 1px solid transparent;
+}
+
 @media (max-width: 400px) { 
     .btn { 
         line-height: 10px;

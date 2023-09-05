@@ -6,13 +6,16 @@ import styles from './UIButton.module.css';
 interface Iprops {
     text: string,
     classes?: string,
+    disabled?: boolean,
     onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
-const UIButton = ({ text, classes, onClick }: Iprops) => {
+const UIButton = ({ text, classes, disabled = false, onClick }: Iprops) => {
+
   return (
     <button 
       className={cn(styles.btn, classes)}
+      disabled={disabled}
       onClick={onClick}
     >
       {text}

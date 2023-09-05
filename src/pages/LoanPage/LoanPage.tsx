@@ -1,18 +1,20 @@
+import { useRef } from 'react';
+
 import Card from './Credit/Card';
 import LoanTabs from './Tabs/LoanTabs';
 import Steps from './Steps/Stepts';
-import Tabs from './Forms/LoanForm/Tabs';
-
+import LoanForm from './LoanForm';
 import styles from './LoanPage.module.css';
 
 const LoanPage = () => {
+  const resultRef = useRef<HTMLElement>(null);
 
   return (
     <div className={styles.wrapper}>
-      <Card />
+      <Card resultRef={resultRef} />
       <LoanTabs />
       <Steps />
-      <Tabs/>
+      <LoanForm ref={resultRef} />
     </div>
   );
 };

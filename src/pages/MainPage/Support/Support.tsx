@@ -13,7 +13,7 @@ import styles from './Support.module.css';
 
 const Support = () => {
   const [emailValue, setEmailValue] = useState('');
-  const [newsletter, setNewsletter] = useState(getLocalStorage('sendEmail'));
+  const [newsletter, setNewsletter] = useState(getLocalStorage('sendEmail').sendEmal);
   const newsletterText = 'You are already subscribed to the bank\'s newsletter';
 
   const subscribeToNews = (e: FormEvent<HTMLFormElement>) => {
@@ -30,7 +30,7 @@ const Support = () => {
     const status = res ? res[1] : 'noData';
         
     if (status === 200 ) { 
-      setLocalStorage('sendEmail',newsletterText);
+      setLocalStorage('sendEmail',{'sendEmal': newsletterText});
       setNewsletter(newsletterText);
     }
   };

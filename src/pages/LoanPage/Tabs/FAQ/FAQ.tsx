@@ -7,8 +7,8 @@ import { ACCORDION_DATA_RECEIVING, ACCORDION_DATA_USING } from './data';
 import styles from './FAQ.module.css';
 
 const FAQ = () => {
-  const [tabReceiving, setTabReceiving] = useState<number|undefined>(undefined);
-  const [tabUsing, setTabUsing] = useState<number|undefined>(undefined);
+  const [tabReceiving, setTabReceiving] = useState<number | null>(null);
+  const [tabUsing, setTabUsing] = useState<number | null>(null);
 
   return (
     <div className={styles.wrapper}>

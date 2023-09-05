@@ -1,12 +1,32 @@
+import { RefObject } from 'react';
+
+import { observer } from 'mobx-react-lite';
+
 import CardItem from '../CardItem';
 import UIButton from '../../../../components/UI/UIButton';
+import { useStore } from '../../../../utils/hooks/useStore';
 
 import { DATA_ITEMS } from './data';
 import card from './img/card.png';
 
 import styles from './Card.module.css';
 
-const Card = () => {
+interface IProps {
+  resultRef: RefObject<HTMLElement>,
+}
+
+const Card = observer(({ resultRef }: IProps) => {
+  const {
+    rootStore: { buttonText },
+  } = useStore();
+
+  const onClick = () => {
+    resultRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'start',
+    });
+  };
 
   return (
     <section className={styles.CreaditCard}>
@@ -32,9 +52,10 @@ const Card = () => {
             })}
           </ul>
           <div className={styles.btn}> 
-            <a href="#form">    
-              <UIButton text={'Apply for card'}/>
-            </a>   
+            <UIButton 
+              text={buttonText.getButtonText}
+              onClick={() => onClick()}
+            />
           </div>
         </div>
         <div className={styles.img__container}>
@@ -43,6 +64,6 @@ const Card = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Card;

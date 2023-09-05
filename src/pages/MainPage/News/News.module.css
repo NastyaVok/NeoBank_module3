@@ -66,6 +66,7 @@
     line-height: 125%;
     margin: var(--spacing-medium) 0;
     height: 104px;
+    overflow: hidden;
 }
 
 .link {
