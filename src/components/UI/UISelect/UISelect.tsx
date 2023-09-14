@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useFormContext, FieldValues } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
-
 import cn from 'classnames';
 
 import styles from './UISelect.module.css';

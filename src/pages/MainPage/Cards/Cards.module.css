@@ -5,20 +5,12 @@
     justify-content: space-between;
 }
 
-.container {
-   
-}
-
 .title {
     color: #1C1C1E;
     font-size: var(--font-size-header);
     font-weight: 700;
     line-height: var(--line-height-header);
     margin-bottom: 36px;
-}
-
-.img {  
-
 }
 
 @media (max-width: 1160px) {

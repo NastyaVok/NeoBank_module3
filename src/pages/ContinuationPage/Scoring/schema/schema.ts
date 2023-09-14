@@ -3,7 +3,7 @@ import * as yup from 'yup';
 export const schemaScoringStep = yup.object().shape({ 
   gender: yup
     .mixed()
-    .oneOf(['MALE', 'FAMALE'] as const, 'Select one of the options')
+    .oneOf(['MALE', 'FEMALE'] as const, 'Select one of the options')
     .defined('Select one of the options'),
   maritalStatus: yup
     .mixed()
