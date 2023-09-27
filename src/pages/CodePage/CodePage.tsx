@@ -15,8 +15,6 @@ const CodePage = observer(() => {
 
   const [success, setSuccess] = useState(stepStore.getStepStore);
 
-  //запросить код и далее с ним сранивать и отправить запрос
-
   return (
     <div className={styles.wrapper}>
       {
